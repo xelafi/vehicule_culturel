@@ -309,6 +309,36 @@ button span:hover {
 opacity: 0;
 top: 20px;
 }
+input[type="button"] {
+    border: none;
+    color: #fff;
+	font-size: 2vw;
+	text-align: center;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	
+    display: inline;
+    padding: 15px 18px;
+	padding: 15px 50px 15px 55px;
+	border-radius: 10px;
+	border: black 3px solid;
+	background: #E10F8E;
+	opacity: 0.95;
+    cursor: pointer;
+	width: 20%;
+    vertical-align: middle;
+    font-family: 'azonix', sans-serif;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 7%;
+}
+input[type="button"]:hover{
+	background: #713B95;
+	width: 19%;
+}
 input[type="text"] {
     border: none;
     color: rgb(0, 0, 0);
@@ -328,7 +358,7 @@ input[type="text"] {
 input[type="submit"] {
     border: none;
     color: #fff;
-    font-size: 2em;
+    font-size: 2vw;
     letter-spacing: 1px;
 	text-transform: uppercase;
 	
