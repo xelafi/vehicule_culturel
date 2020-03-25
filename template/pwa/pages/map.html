@@ -1,0 +1,95 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+<title>ESCAPE-C</title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Wonder Coming Soon Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+
+<!-- css files -->
+<link rel="stylesheet" href="../css/css_map.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="../css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link href="../css/popup-box.css" rel="stylesheet" type="text/css" media="all" /><!-- //popup css -->
+<link rel="stylesheet" href="../css/jquery.countdown.css" /><!-- //countdown css -->
+<!-- //css files -->
+
+<!-- google fonts -->
+<link href="//fonts.googleapis.com/css?family=Cinzel:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<!-- //google fonts -->
+
+</head>
+<body>
+
+	<header role="header">
+		<nav class="menu" role="navigation">
+			<div class="m-left">
+				<h1 class="logo">
+					
+				</h1>
+			</div>
+			<div class="m-center">
+				<h1>SCORE : X POINT(S)</h1>
+			</div>
+			<div class="m-right">
+				<a href="../index.html"><input type="button" value="LIEU D'ARRIVER"></a>
+			</div>
+		</nav>
+	</header>
+	<div id="map">map ici</div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcEmTYT_f5dLmLhCwYfP7aeQZhzrfg9kI&callback=initMap">
+    </script>
+	<!-- js -->
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->
+</body>
+</html>
