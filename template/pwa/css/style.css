@@ -28,6 +28,13 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 
+	@media only screen and (orientation: portrait) and (max-width: 100%) {
+		html {
+	  transform: rotate(90deg);
+	  width: calc(100%);
+	 
+	}
+  }
 body,html{
 	background-attachment: fixed;
     background-position: center;
@@ -86,6 +93,7 @@ body {
 	flex-grow: 1;
 	max-height: 100%;
 }
+
 .logo a{
 	padding-top: 10px;
 	font-size:2vw;
