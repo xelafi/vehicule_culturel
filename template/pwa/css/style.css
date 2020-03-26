@@ -82,7 +82,8 @@ body {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait) {
@@ -96,6 +97,11 @@ body {
 	  top: 100%;
 	  left: 0;
 	  background-image: url("../images/Escape_90d.jpg");
+	  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
 	}
   }
 
