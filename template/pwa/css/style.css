@@ -91,7 +91,6 @@ body {
 	  transform: rotate(-90deg);
 	  transform-origin: left top;
 	  width: 150%;
-	  height: 50%;
 	  overflow-x: hidden;
 	  position: absolute;
 	  top: 100%;
