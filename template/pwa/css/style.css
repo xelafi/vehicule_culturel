@@ -28,6 +28,9 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 
+
+
+	
 body,html{
 	background-attachment: fixed;
     background-position: center;
@@ -79,13 +82,36 @@ body {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
 }
+
+@media screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait) {
+	body {
+	  transform: rotate(-90deg);
+	  transform-origin: left top;
+	  width: 150%;
+	  height: 100%;
+	  overflow-x: hidden;
+	  position: absolute;
+	  top: 100%;
+	  left: 0;
+	  background-image: url("../images/Escape_90d.jpg");
+	  background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat: no-repeat;
+	}
+  }
+
+
 .main{
 	
 	flex-grow: 1;
 	max-height: 100%;
 }
+
 .logo a{
 	padding-top: 10px;
 	font-size:2vw;
