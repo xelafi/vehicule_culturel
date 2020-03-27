@@ -86,24 +86,7 @@ body {
 	background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 0px) and (max-width: 767px) and (orientation: portrait) {
-	body {
-	  transform: rotate(-90deg);
-	  transform-origin: left top;
-	  width: 150%;
-	  height: 100%;
-	  overflow-x: hidden;
-	  position: absolute;
-	  top: 100%;
-	  left: 0;
-	  background-image: url("../images/Escape_90d.jpg");
-	  background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	}
-  }
+
 
 
 .main{
