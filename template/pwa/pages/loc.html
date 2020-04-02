@@ -15,13 +15,22 @@
     <div id="map"></div>
     <script>
       var map, infoWindow;
+    
+      
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
-          zoom: 18
+          zoom: 18,
+          maxZoom: 18,
+          minZoom : 18,
+          disableDefaultUI: true,
+          draggable : false,
+          scrollwheel: false,
+          
+          
         });
+        
         infoWindow = new google.maps.InfoWindow;
-
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.watchPosition(function(position) {
