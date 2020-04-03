@@ -485,4 +485,20 @@ input[type="email"] {
 	color: #888;
 }
 
+nav {
+    position: relative;
+  }
 
+  img {
+    width: 90%;/* s'adapteras à la largeur du conteneur */
+  }  
+
+a {
+    /* color:transparent;*/
+      position: absolute;
+      border: solid;
+      top: 10%;
+      left: 44%;
+      width: 5%;
+      height: 20%;
+    }
