@@ -485,8 +485,8 @@ input[type="email"] {
 	color: #888;
 }
 
-.map__image{
+.map__image {
    
     flex-grow: 1;
-    width: 50%;
+    width: 100%;
 }
