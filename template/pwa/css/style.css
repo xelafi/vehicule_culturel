@@ -344,15 +344,13 @@ input[type="button"] {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-	margin-left: 3%;
-	margin-right: 3%;
-	margin-top: 7%;
+	
+	
 }
 input[type="button"]:hover{
 	background: #E10F8E;
-	width: 18%;
-	margin-left: 4%;
-	margin-right: 4%;
+
+	
 }
 input[type="text"] {
 	border: none;
@@ -505,3 +503,6 @@ input[type="email"] {
     margin-left: 20%;
 }
 
+.next {
+    text-align: center;
+}
