@@ -92,7 +92,29 @@ body {
 .main{
 	
 	flex-grow: 1;
-	max-height: 100%;
+    max-height: 100%;
+    
+}
+
+.all{
+	margin-top: 10%;
+	flex-grow: 1;
+    max-height: 100%;
+    text-align: center;
+    
+    
+}
+
+.allq{
+	margin-top: 10%;
+	flex-grow: 1;
+    max-height: 100%;
+    text-align: center;
+    background-color: white;
+    margin-top: 3%;
+    height: 87%;
+    float: left;
+    
 }
 
 .logo a{
@@ -177,6 +199,16 @@ ul.social li .fa-google-plus:hover {
    font-family: 'Azonix';
    text-shadow: 0 0 0.2em #000000, 0 0 0.2em #000000,
         0 0 0.2em #000000;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    word-spacing: 10px;
+   font-family: 'Azonix';
+  
 }
 
 /*--timer--*/
@@ -344,15 +376,13 @@ input[type="button"] {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-	margin-left: 3%;
-	margin-right: 3%;
-	margin-top: 7%;
+	
+	
 }
 input[type="button"]:hover{
 	background: #E10F8E;
-	width: 18%;
-	margin-left: 4%;
-	margin-right: 4%;
+
+	
 }
 input[type="text"] {
 	border: none;
@@ -489,4 +519,164 @@ input[type="email"] {
    
     flex-grow: 1;
     width: 100%;
+}
+
+.bv1 {
+    text-align:center;
+    width: 96%;
+    margin-top: 12%;
+    
+
+    
+}
+
+.bv2 {
+    width: 80%;
+    margin-left: 20%;
+}
+
+.next {
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+}
+.menu{
+    margin-top: 2%;
+    background:rgb(255, 255, 255);
+	width: 100%;
+    height: 75px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.m-left{
+    float: left;
+    width: 25%;
+    height: 75px;
+    overflow:hidden;
+ 
+}
+.marker{
+    
+    width: 60px;
+}
+.m-center{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+   
+}
+
+.m-right{
+    float: right;
+    width: 24%;
+    text-align: right;
+    margin-right: 1%;
+    padding-top: 10px;
+   
+}
+.logo{
+    width: 55px;
+    vertical-align: middle;
+    height: 65px;
+    background-image: url("../images/marker-blanc.png");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+.photo{
+    float: left;
+    width: 60%;
+    height: 90%;
+    
+}
+.escpace{
+    width: 100%;
+    height: 15%;
+    
+    
+}
+.photo-center{
+    
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    overflow:hidden;
+    
+}
+
+.question{
+   
+    height: 10%;
+}
+
+.rep{
+   
+    float: right;
+    width: 40%;
+    height: 90%;
+}
+
+.escpace2{
+    width: 100%;
+    height: 30%;
+  
+}
+.bouts{
+
+    height: 50%;
+    width: 100%;
+}
+
+.bouts-left{
+   
+    float: left;
+    width: 50%;
+    height: 50%;
+}
+.bouts-right{
+  
+    float: right;
+    width: 50%;
+    height: 50%;
+}
+
+.bouts input[type="button"] {
+    border: none;
+    color: #fff;
+	font-size: 1vw;
+	text-align: center;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	
+    display: inline;
+    padding: 15px 18px;
+	padding: 15px 50px 15px 55px;
+	border-radius: 50px;
+	border: #E10F8E 3px solid;
+	background: rgb(0, 0, 0) ;
+	opacity: 0.95;
+    cursor: pointer;
+	width: 80%;
+    vertical-align: middle;
+    font-family: 'azonix', sans-serif;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.bouts input[type="button"]:hover{
+    background: #E10F8E;
 }
