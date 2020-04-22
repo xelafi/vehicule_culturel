@@ -546,6 +546,15 @@ input[type="email"] {
     text-align: center;
 
 }
+
+.box2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+
+}
 .menu{
     margin-top: 2%;
     background:rgb(255, 255, 255);
@@ -598,8 +607,10 @@ input[type="email"] {
 }
 .photo{
     float: left;
-    width: 60%;
+    width: 49%;
     height: 90%;
+    overflow:hidden;
+    margin-left: 1%;
     
 }
 .escpace{
@@ -608,14 +619,7 @@ input[type="email"] {
     
     
 }
-.photo-center{
-    
-    width: 90%;
-    height: 70%;
-    margin: auto;
-    overflow:hidden;
-    
-}
+
 
 .question{
    
@@ -625,7 +629,7 @@ input[type="email"] {
 .rep{
    
     float: right;
-    width: 40%;
+    width: 50%;
     height: 90%;
 }
 
@@ -636,27 +640,47 @@ input[type="email"] {
 }
 .bouts{
 
-    height: 50%;
+    height: 70%;
     width: 100%;
+
 }
 
-.bouts-left{
+.force-left{
    
     float: left;
     width: 50%;
     height: 50%;
+    text-align: center;
+    position: relative;     
 }
-.bouts-right{
-  
+
+.force-left input[type="button"]
+{
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%);
+}
+
+.force-right{
+   
     float: right;
     width: 50%;
     height: 50%;
+    text-align: center; 
+    position: relative;      
+}
+
+.force-right input[type="button"]
+{
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%);
 }
 
 .bouts input[type="button"] {
     border: none;
     color: #fff;
-	font-size: 1vw;
+	font-size: 2vw;
 	text-align: center;
     letter-spacing: 1px;
 	text-transform: uppercase;
@@ -669,7 +693,8 @@ input[type="email"] {
 	background: rgb(0, 0, 0) ;
 	opacity: 0.95;
     cursor: pointer;
-	width: 80%;
+    width: 80%;
+    height: 40%;
     vertical-align: middle;
     font-family: 'azonix', sans-serif;
 	-webkit-transition: all 0.5s;
