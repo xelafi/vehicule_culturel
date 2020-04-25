@@ -46,7 +46,11 @@
                 position: pos,
                 map: map,
                 title: '',
-                icon: '../images/icon-bus.png', 
+               
+                icon: {
+		                url: "../images/icon-bus.png",
+		                scaledSize: new google.maps.Size(64, 64),
+	              }
               });
               // <----------------------------------------------------------------------------->
               function autoUpdate() {
