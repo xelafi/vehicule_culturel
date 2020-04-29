@@ -91,6 +91,19 @@
             // Browser doesn't support Geolocation
             handleLocationError(false, infoWindow, map.getCenter());
           }
+          var marker = new google.maps.Marker({
+            position:{lat:48.9256271,lng:2.2089721},
+            map: map,
+           
+            icon: {
+		                url: "../images/icon-q.png",
+		                scaledSize: new google.maps.Size(104, 128),
+	              }
+            
+          });
+          marker.addListener('click',function() {
+            window.location.href = 'question.html';
+          })
         }
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {

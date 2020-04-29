@@ -79,7 +79,7 @@ a:hover{
 /*--main--*/
 /*--header start here--*/
 body {
-    background-image: url("../images/Escape_game2.jpg");
+    background-image: url("../images/eiffel-tower-4.png");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -195,7 +195,7 @@ ul.social li .fa-google-plus:hover {
     padding: 2em 0em;
 }
  h1 {
-    color: #EAEAEA;
+    color: #E10F8E;
     font-size: 3vw;
     font-weight: 300;
     text-transform: uppercase;
@@ -789,3 +789,66 @@ input[type="email"] {
     background: #E10F8E;
 }
 
+.log{
+    width: 10%;
+    height: 10%;
+    
+    text-align: center;
+    margin-top: 1%;
+}
+
+.text-classement{
+width: 25%;
+height: 10%;
+background-color: black;
+margin-top: 1%;
+text-align: center;
+}
+
+.classement{
+    background-color: chartreuse;
+    width: 100%;
+    height: 70%;
+    margin-top: 2%;
+}
+
+.premier{
+    background-color: darkblue;
+    width: 42%;
+    height: 100%;
+    margin-left: 3%;
+    float: left;
+}
+
+.reste{
+    background-color: red;
+    width: 55%;
+    height: 100%;
+    float: right;
+}
+
+.deuxieme{
+    background-color: royalblue;
+    width: 30%;
+    height: 90%;
+    margin-top: 3%;
+    margin-left: 3%;
+    float: left;
+}
+.troisieme{
+    background-color: rgb(90, 23, 81);
+    width: 30%;
+    height: 90%;
+    margin-top: 3%;
+    margin-left: 3%;
+    float: left;
+}
+
+.quartieme{
+    background-color: rgb(90, 23, 81);
+    width: 30%;
+    height: 90%;
+    margin-top: 3%;
+    margin-left: 3%;
+    float: left;
+}

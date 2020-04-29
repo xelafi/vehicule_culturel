@@ -57,7 +57,130 @@
 			<img src="../images/bus.png" alt=""  height="90%" style="margin-top: 1.6%;" />
 		</div>
 		<div id="map">
-			<object type="text/html" data="loc.html" width="100%" height="100%" ></object>
+			div id="map">
+      </div>
+      <script>
+        var map, infoWindow;
+        var myStyles =[
+        {
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [
+          { visibility: "off" }
+          ]
+        }
+        ];
+      
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 18,
+            maxZoom: 18,
+            minZoom : 18,
+            disableDefaultUI: true,
+            draggable : false,
+            scrollwheel: false,
+            styles: myStyles,  
+          });
+        
+          infoWindow = new google.maps.InfoWindow;
+          // Try HTML5 geolocation.
+          if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(function(position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+
+              var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: '',
+               
+                icon: {
+		                url: "../images/icon-bus.png",
+		                scaledSize: new google.maps.Size(64, 64),
+	              }
+              });
+              // <----------------------------------------------------------------------------->
+              function autoUpdate() {
+                navigator.geolocation.getCurrentPosition(function(position) { 
+                  var newPoint = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+ 
+                  if (marker) {
+                    // Si le marqueur existe déjà, je le déplace simplement
+                    marker.setPosition(newPoint);
+                  }
+                  else {
+                    // Si le marqueur n'existe pas, je le créé
+                    marker = new google.maps.Marker({
+                      position: newPoint,
+                      map: map,
+                    });
+                  }
+ 
+                  // Je centre la carte sur ma nouvelle position
+                  map.setCenter(newPoint);
+                });
+ 
+                // J'appelle ma fonction autoUpdate() toutes les 1 seconde
+                setTimeout(autoUpdate, 1000);
+              }
+ 
+              autoUpdate();
+ 
+              // <----------------------------------------------------------------------------->
+
+              map.setCenter(pos);
+            }, 
+            function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+    
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
+          var marker = new google.maps.Marker({
+            position:{lat:48.9256271,lng:2.2089721},
+            map: map,
+           
+            icon: {
+		                url: "../images/icon-q.png",
+		                scaledSize: new google.maps.Size(104, 128),
+	              }
+            
+          });
+          marker.addListener('click',function() {
+            window.location.href = 'question.html';
+          })
+
+		  var marker = new google.maps.Marker({
+            position:{lat:48.9246239,lng:2.2064836},
+            map: map,
+           
+            icon: {
+		                url: "../images/icon-q.png",
+		                scaledSize: new google.maps.Size(104, 128),
+	              }
+            
+          });
+          marker.addListener('click',function() {
+            window.location.href = 'question.html';
+          })
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+          infoWindow.setContent(browserHasGeolocation ?
+           'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+          infoWindow.open(map);
+        }
+      </script>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvgE12Re3UeundWgP23srDEVh-WrUs3bM&callback=initMap"></script>
+      <script src="../js/main.js"></script>
 		</div>
 		<!-- js -->
 		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
