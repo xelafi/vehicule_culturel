@@ -43,9 +43,19 @@
 			<nav class="menu" role="navigation" >
 				<div class="m-left"  style="margin-top: 3%;">
 					<p>Equipe : EQUIPE</p>		
-				</div>
+        </div>
+        <script>
+          var score;
+          score = 0;
+        </script>
 				<div class="m-center"  style="margin-top: 3%;">
-					<h1>SCORE : X POINT(S)</h1>
+          <h1>SCORE : <script>document.write(score)</script> 
+          <script> if ( score>1)
+          { document.write("POINTS");}
+          else{
+            document.write("POINT");
+          }
+          </script></h1>
 				</div>
 				
 				<div class="m-right"  style="margin-top: 3%;">
