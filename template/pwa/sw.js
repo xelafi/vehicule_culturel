@@ -21,7 +21,6 @@ var filesToCache = [
  './css/css_map.css',
  './css/font-awesome.css',
  './css/jquery.countdown.css',
- './css/popup-box.css',
  './js/main.js'
 ];
 /* Démarrer le service worker et mettre en cache tout le contenu de l'application
