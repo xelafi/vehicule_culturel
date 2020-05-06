@@ -49,7 +49,26 @@
 				
 			<div style="padding-top: 2%;" class="header">
 				<h1>SELECTIONNER VOTRE LIEU DE DEPART</h1>
-		<div id="name"><script>getElementById("name").innerHTML = name;</script></div>
+				<script>
+					function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace( 
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;	
+	}
+	return vars;
+}
+var $_GET = $_GET(),
+    name = $_GET['name'];	
+				
+				</script>
+		<div id="name"></div>
 				
 <script>
 	
@@ -63,8 +82,15 @@
 	  document.getElementById("name").innerHTML = l;
 	  
 	}
-	
+
   </script>
+
+<p id='cook'></p>
+<script>
+	document.cookie= name;
+	var c = document.cookie;
+	
+</script>
 				<br>
 				<br>
 				<div class="map2" id="map2">

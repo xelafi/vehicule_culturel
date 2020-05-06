@@ -42,7 +42,13 @@
 		
 			<nav class="menu" role="navigation" >
 				<div class="m-left"  style="margin-top: 3%;">
-					<p>Equipe : EQUIPE</p>		
+          <p style="display: inline;">Equipe : </p>
+          <p id='cook' style="display: inline;"></p>
+<script>
+	document.cookie= name;
+	var c = document.cookie;
+	document.getElementById('cook').innerHTML = c;
+</script>		
         </div>
         <script>
           var score;
