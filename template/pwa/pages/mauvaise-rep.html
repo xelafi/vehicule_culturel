@@ -40,6 +40,25 @@
 
 	</head>
 	<body>
+		<script>
+			function $_GET(param) {
+	  var vars = {};
+	  window.location.href.replace( location.hash, '' ).replace( 
+	  /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+	  function( m, key, value ) { // callback
+		vars[key] = value !== undefined ? value : '';
+	  }
+	  );
+	  
+	  if ( param ) {
+	  return vars[param] ? vars[param] : null;	
+	  }
+	  return vars;
+	  }
+	  var $_GET = $_GET(),
+		  
+	  lieu = $_GET['lieu'];	
+	  </script>
 		<div class="box">
 		<!-- main -->
 
@@ -49,7 +68,16 @@
             <img src="../images/no.png" style="width: 10%;"/>
             <div class="next">
 				<br><br><br>
-                <a href="pages/concept.html"><input type="button" value="suivant"></a>
+				
+				<a href="mr-bonne.html"><input type="button" value="suivant" onclick="doClick(); return false;"></a>
+				<script>
+					function doClick() {
+					   if (lieu)
+						   window.location.href = "map.html";
+					   else
+						   window.location.href = "mr-bonne.html";
+					}
+					</script>
             </div>
 		</div>
 		<!-- //main-->

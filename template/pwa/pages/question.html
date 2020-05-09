@@ -45,7 +45,12 @@
                 </h1>
             </div>
             <div class="m-center">
-                <h2>equipe</h2>
+				<h2 id='cook' style="display: inline;"></h2>
+				<script>
+					document.cookie= name;
+					var c = document.cookie;
+					document.getElementById('cook').innerHTML = c;
+				</script>		
             </div>
         </nav>
         
@@ -53,7 +58,15 @@
 
 		<div class="allq">
             <div class="question">
-                <br><br><h3>Quelle est la hauteur de la Tour Eiffel ?</h3>
+				<br><br><h3>Quelle est la hauteur de la Tour Eiffel ?</h3>
+				<h3 id='cook2' style="display: inline;"></h3>
+				<p id='cook2'></p>
+				<script>
+					
+					document.cookie= score;
+					var c2 = document.cookie;
+					document.getElementById('score').innerHTML = c2;
+				</script>		
             </div>
 		    <div class="photo">
                 <div class="box2" >
@@ -67,17 +80,17 @@
                 <div class="box2" >
                 <div class="bouts" style="text-align: left;">
                     <div class="force-left">
-                        <a href="question.html"><input type="button" value="250 m"></a>
+                        <a href="mauvaise-rep.html"><input type="button" value="250 m"></a>
                     </div>
                     <div class="force-right">
-                    <a href="question.html"><input type="button" value="300 m"></a>
+                    <a href="mauvaise-rep.html"><input type="button" value="300 m"></a>
                     </div>
                     <br>
                     <div class="force-left">
-                        <a href="question.html"><input type="button" value="324 m"></a>
+                        <a href="bonne-rep.html"><input type="button" value="324 m"></a>
                     </div>
                     <div class="force-right">
-                        <a href="question.html"><input type="button" value="350 m"></a>
+                        <a href="mauvaise-rep.html"><input type="button" value="350 m"></a>
                     </div>
                 </div>
             </div>

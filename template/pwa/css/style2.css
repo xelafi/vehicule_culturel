@@ -570,6 +570,14 @@ input[type="email"] {
     text-align: center;
 
 }
+.box3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    text-align: center;
+
+}
 .menu{
     margin-top: 2%;
     
@@ -628,9 +636,56 @@ input[type="email"] {
     margin-left: 1%;
       
 }
+
+.bn{
+    margin-top: 1%;
+    width: 100%;
+    height: 86%;
+    
+    text-align: center;
+      
+}
+
+.bn input[type="button"] {
+    border: none;
+    color: #fff;
+	font-size: 2vw;
+	text-align: center;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	
+    display: inline;
+    padding: 15px 18px;
+	padding: 15px 50px 15px 55px;
+	border-radius: 50px;
+	border: #E10F8E 3px solid;
+	background: rgb(0, 0, 0) ;
+	opacity: 0.95;
+    cursor: pointer;
+    width: 20%;
+    height: 10%;
+    vertical-align: middle;
+    font-family: 'azonix', sans-serif;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+ .bn input[type="button"]:hover{
+    background: #E10F8E;
+}
+
+
+
 .photo img{
     border-radius: 10px; 
 }
+
+.bn img{
+    border-radius: 10px; 
+}
+
+
 .escpace{
     width: 100%;
     height: 15%;

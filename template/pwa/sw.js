@@ -10,6 +10,7 @@ var filesToCache = [
  './pages/loc.html',
  './pages/choix.html',
  './pages/mauvaise-rep.html',
+ './pages/mr-bonne.html',
  './pages/bonne-rep.html',
  './pages/question.html',
  './pages/svg.html',

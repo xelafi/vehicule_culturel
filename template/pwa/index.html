@@ -54,6 +54,11 @@
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 		<!-- //js -->
 		<script src="js/main.js"></script>
+		<script>
+			if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('/sw.js');
+			}
+			</script>
 	</div>
 	</body>
 </html>

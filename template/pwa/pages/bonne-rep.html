@@ -42,14 +42,33 @@
 	<body>
 		<div class="box">
 		<!-- main -->
+		<script>
+			function $_GET(param) {
+var vars = {};
+window.location.href.replace( location.hash, '' ).replace( 
+/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+function( m, key, value ) { // callback
+	vars[key] = value !== undefined ? value : '';
+}
+);
 
+if ( param ) {
+return vars[param] ? vars[param] : null;	
+}
+return vars;
+}
+var $_GET = $_GET(),
+		
+lieu = $_GET['lieu'];	
+</script>
 		<div class="main">
-            <h1>Bonne réponse</h1>
+            <h1>Bonne réponse </h1>
             <img src="../images/100pts.png" style="width: 25%;"/><br><br>
             <img src="../images/bon.png" style="width: 10%;"/>
             <div class="next">
 				<br><br><br>
-                <a href="map.html"><input type="button" value="suivant"></a>
+				
+				<a href="map.html" onclick="location.href=this.href+'?lieu='+lieu;return false;"><input type="button" value="suivant"></a>
             </div>
 		</div>
 		<!-- //main-->

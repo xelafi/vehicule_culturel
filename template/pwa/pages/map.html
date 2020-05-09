@@ -49,11 +49,18 @@
 	var c = document.cookie;
 	document.getElementById('cook').innerHTML = c;
 </script>		
+
+
+
         </div>
-        <script>
-          var score;
-          score = 0;
-        </script>
+        <p id='cook2'></p>
+<script>
+ 
+	document.cookie= score;
+	var c2 = document.cookie;
+	
+	  
+</script>
 				<div class="m-center"  style="margin-top: 3%;">
           <h1>SCORE : <script>document.write(score)</script> 
           <script> if ( score>1)
@@ -64,9 +71,37 @@
           </script></h1>
 				</div>
 				
+
 				<div class="m-right"  style="margin-top: 3%;">
-				<p><a href="lieux.html" class="m-link">Lieu d'arivée</a></p>
-			</div>
+				<p><a id="lien-lieu" href="lieux.html" class="m-link">Lieu d'arivée</a></p>
+      </div>
+      <script>
+        function $_GET(param) {
+  var vars = {};
+  window.location.href.replace( location.hash, '' ).replace( 
+  /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+  function( m, key, value ) { // callback
+    vars[key] = value !== undefined ? value : '';
+  }
+  );
+  
+  if ( param ) {
+  return vars[param] ? vars[param] : null;	
+  }
+  return vars;
+  }
+  var $_GET = $_GET(),
+      
+  lieu = $_GET['lieu'];	
+  </script>
+      <script>
+        
+        if (lieu=="louvre") {
+          document.getElementById('lien-lieu').style.display = "none"
+      } else {
+          document.getElementById('lien-lieu').style.display = ""
+      }
+      </script>
 			</nav>
 	
 		<div class="route">
