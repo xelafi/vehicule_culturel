@@ -6,7 +6,7 @@ var filesToCache = [
  './pages/classement.html',
  './pages/concept.html',
  './pages/equipe.html',
- './pages/lieu.html',
+ './pages/lieux.html',
  './pages/loc.html',
  './pages/choix.html',
  './pages/mauvaise-rep.html',
