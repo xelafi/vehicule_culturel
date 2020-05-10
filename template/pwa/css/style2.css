@@ -844,3 +844,26 @@ input[type="email"] {
     background: #E10F8E;
 }
 
+.box input[type="button"] {
+    border: none;
+    color: #fff;
+	font-size: 2vw;
+	text-align: center;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	
+    display: inline;
+    padding: 15px 18px;
+	padding: 15px 50px 15px 55px;
+	border-radius: 10px;
+	border: black 3px solid;
+	background: #713B95 ;
+	opacity: 0.95;
+    cursor: pointer;
+	width: 40%;
+    vertical-align: middle;
+    font-family: 'azonix', sans-serif;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+    transition: all 0.5s;
+}

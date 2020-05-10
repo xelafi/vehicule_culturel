@@ -32,7 +32,7 @@
 		<meta name="apple-mobile-web-app-title" content="Hello World">
 		<meta name="msapplication-TileImage" content="../images/hello-icon-144.png">
 		<meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta http-equiv="refresh" content="59; URL=cadeaux.html" />
+		
 
 		<!-- google fonts -->
 		<link href="//fonts.googleapis.com/css?family=Cinzel:400,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -49,34 +49,10 @@
 		</div>
 		<div class="head-time">
         <div class="text-classement">
-			<br><h1>Classement</h1>
+			<br><h1>BRAVO !</h1>
 		</div>
-		<div class="time"><h1 style="margin-top: 10%;"><span id="timer"></h1></span></div>
-		<script>
-			document.getElementById('timer').innerHTML =
-	  001 + ":" + 00;
-	startTimer();
-	
-	function startTimer() {
-	  var presentTime = document.getElementById('timer').innerHTML;
-	  var timeArray = presentTime.split(/[:]+/);
-	  var m = timeArray[0];
-	  var s = checkSecond((timeArray[1] - 1));
-	  if(s==59){m=m-1}
-	  //if(m<0){alert('timer completed')}
-	  
-	  document.getElementById('timer').innerHTML =
-		m + ":" + s;
-	  console.log(m)
-	  setTimeout(startTimer, 1000);
-	}
-	
-	function checkSecond(sec) {
-	  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-	  if (sec < 0) {sec = "59"};
-	  return sec;
-	}
-		</script>
+		
+		
 	</div>
 		
         <div class="classement">
@@ -139,37 +115,8 @@
 						</p>
 				</div>
             </div>
-            <div class="reste">
-                <div class="deuxieme">
-					<img src="../images/deuxieme.png" width=""/>
-					<div class="text-wrapper2">
-						<p> nom ici 
-							<br><br>
-							score ici
-						</p>
-					</div>
-					
-                </div>
-                <div class="troisieme">
-					<img src="../images/toirsieme.png" width=""/>
-					<div class="text-wrapper2">
-						<p> nom ici 
-							<br><br>
-							score ici
-						</p>
-					</div>
-                </div>
-                <div class="quartieme">
-					<img src="../images/quatrieme.png" width=""/>
-					<div class="text-wrapper2">
-						<p> nom ici 
-							<br><br>
-							score ici
-						</p>
-					</div>
-
-                </div>
-
+            <div class="reste" style="background-color: aqua;">
+               
 			</div>
 			
         </div>
