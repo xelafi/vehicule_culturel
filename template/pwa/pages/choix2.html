@@ -65,14 +65,17 @@
 	return vars;
 }
 var $_GET = $_GET(),
-	name = encodeURIComponent( $_GET['name'] ).replace('%2B',' ');	
-	score =	$_GET['score'];
+	team = encodeURIComponent( $_GET['team'] ).replace('%2B',' ').replace('%2B',' ').replace('%2B',' ').replace('%2B',' ');	
+	score =	0;
+	bus = 0;
+	
 		
 	
 				
 				</script>
-		<div id="name"></div>
-		<div id="score"></div>
+		<div id="cook"></div>
+		<div id="cook2"></div>
+		<div id="cook4"></div>
 				
 <script>
 	
@@ -84,30 +87,59 @@ var $_GET = $_GET(),
     l = unescape(temp[1]);
     temp = parameters[1].split("=");
     p = unescape(temp[1]);
-    document.getElementById("name").innerHTML = l;
+    document.getElementById("team").innerHTML = l;
     document.getElementById("score").innerHTML = p;
 	  
 	}
 
   </script>
 
-<p id='cook'></p>
-<script>
-	document.cookie= name;
-	var c = document.cookie;
-	
-document.write(name)
-	  
-</script>
 
-<p id='cook2'></p>
-<script>
-	document.cookie= score;
-	var c2 = document.cookie;
-	document.write(score);
-	  
-</script>
+    <script>
+        function creerCookie(nom,valeur,jour){
+            if(jour){
+                var date = new Date();
+                date.setTime(date.getTime()+(jour*24*60*60*1000));
+                var exp = '; expires='+date.toGMTString();
+            }
+            else{
+                var exp = '';
+            }
+            document.cookie = nom+'='+valeur+exp+';path=/';
+        }
 
+        function lireCookie(nom){
+            var nomEtEgal = nom + '=';
+            var cTableau = document.cookie.split(';');
+            for(var i=0;i<cTableau.length; i++){
+                var c = cTableau[i];
+                while(c.charAt(0)==' '){
+                    c = c.substring(1,c.length);
+                }
+                if(c.indexOf(nomEtEgal) == 0){
+                    return c.substring(nomEtEgal.length,c.length);
+                }
+            }
+            return null
+        }
+
+        function supprimerCookie(nom){
+            creerCookie(nom,'',-1);
+        }
+
+        creerCookie('team',team, 7);
+		creerCookie('score',score,7);
+		creerCookie('bus',bus,7);
+		
+
+        var affiche = document.getElementById('cook');
+        affiche.innerHTML = 'Valeur : ' + lireCookie('team');
+        var affiche2 = document.getElementById('cook2');
+		affiche2.innerHTML = 'Valeur : ' + lireCookie('score');
+		var affiche4 = document.getElementById('cook4');
+		affiche4.innerHTML = 'Valeur : ' + lireCookie('bus');
+		
+    </script>
 				<br>
 				<br>
 				<div class="map2" id="map2">

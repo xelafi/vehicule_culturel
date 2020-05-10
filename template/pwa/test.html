@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="refresh" content="1; URL=index.html" />
+
+</head>
+<body>
+    <p id ='cook'></p>
+    <br>
+    <p id ='cook2'></p>
+    <script>
+var team = 5;
+
+        function creerCookie(nom,valeur,jour){
+            if(jour){
+                var date = new Date();
+                date.setTime(date.getTime()+(jour*24*60*60*1000));
+                var exp = '; expires='+date.toGMTString();
+            }
+            else{
+                var exp = '';
+            }
+            document.cookie = nom+'='+valeur+exp+';path=/';
+        }
+
+        function lireCookie(nom){
+            var nomEtEgal = nom + '=';
+            var cTableau = document.cookie.split(';');
+            for(var i=0;i<cTableau.length; i++){
+                var c = cTableau[i];
+                while(c.charAt(0)==' '){
+                    c = c.substring(1,c.length);
+                }
+                if(c.indexOf(nomEtEgal) == 0){
+                    return c.substring(nomEtEgal.length,c.length);
+                }
+            }
+            return null
+        }
+
+        function supprimerCookie(nom){
+            creerCookie(nom,'',-1);
+        }
+
+        creerCookie('Equipe', team , 7);
+        creerCookie('score','100',7);
+
+        var affiche = document.getElementById('cook');
+        affiche.innerHTML = 'Valeur : ' + lireCookie('Equipe');
+        var affiche2 = document.getElementById('cook2');
+        affiche2.innerHTML = 'Valeur : ' + lireCookie('score');
+    </script>
+
+    <script>
+        var dodo = 55;
+        var popo = 45;
+
+        var team = team + 100;
+
+        document.write(team);
+        creerCookie('Equipe',team ,7)
+    </script>
+ <a href="index.html"><input type="button" value="Continuer"></a>
+</body>
+</html>

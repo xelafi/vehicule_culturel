@@ -39,42 +39,84 @@
 
 	</head>
 	<body>
+
+    
 		
 			<nav class="menu" role="navigation" >
-				<div class="m-left"  style="margin-top: 3%;">
-          <p style="display: inline;">Equipe : </p>
+        <div class="m-left"  >
+          
+    <br>
+    
+    
+          <p style="display: inline;">Equipe : <p id ='cook' style="display: inline;"></p></p>
           <p id='cook' style="display: inline;"></p>
-<script>
-	document.cookie= name;
-	var c = document.cookie;
-	document.getElementById('cook').innerHTML = c;
-</script>		
+
 
 
 
         </div>
-        <p id='cook2'></p>
-<script>
- 
-	document.cookie= score;
-	var c2 = document.cookie;
-	
-	  
-</script>
+  
 				<div class="m-center"  style="margin-top: 3%;">
-          <h1>SCORE : <script>document.write(score)</script> 
-          <script> if ( score>1)
-          { document.write("POINTS");}
+          <h1 style="display: inline;">SCORE : <h1 style="display: inline;" id ='cook2'></h1></script> 
+          <h1 style="display: inline;">
+          <script>
+        function creerCookie(nom,valeur,jour){
+            if(jour){
+                var date = new Date();
+                date.setTime(date.getTime()+(jour*24*60*60*1000));
+                var exp = '; expires='+date.toGMTString();
+            }
+            else{
+                var exp = '';
+            }
+            document.cookie = nom+'='+valeur+exp+';path=/';
+        }
+
+        function lireCookie(nom){
+            var nomEtEgal = nom + '=';
+            var cTableau = document.cookie.split(';');
+            for(var i=0;i<cTableau.length; i++){
+                var c = cTableau[i];
+                while(c.charAt(0)==' '){
+                    c = c.substring(1,c.length);
+                }
+                if(c.indexOf(nomEtEgal) == 0){
+                    return c.substring(nomEtEgal.length,c.length);
+                }
+            }
+            return null
+        }
+
+        function supprimerCookie(nom){
+            creerCookie(nom,'',-1);
+        }
+
+
+
+        var affiche = document.getElementById('cook');
+        affiche.innerHTML =  lireCookie('team');
+        var affiche2 = document.getElementById('cook2');
+        affiche2.innerHTML = lireCookie('score');
+        var affiche3 = lireCookie('score');
+ 
+          if ( affiche3>1)
+          { 
+        
+            document.write("&nbsp;POINTS");}
           else{
-            document.write("POINT");
+            
+            document.write("&nbsp;POINT");
           }
+          
           </script></h1>
 				</div>
-				
+      </h1>
 
 				<div class="m-right"  style="margin-top: 3%;">
 				<p><a id="lien-lieu" href="lieux.html" class="m-link">Lieu d'arivée</a></p>
       </div>
+
+     
       <script>
         function $_GET(param) {
   var vars = {};
@@ -104,9 +146,29 @@
       </script>
 			</nav>
 	
-		<div class="route">
-			<img src="../images/bus.png" alt=""  height="90%" style="margin-top: 1.6%;" />
-		</div>
+		<div id="route" class="route">
+    
+			
+    </div>
+    <script>
+      
+      var bus = lireCookie('bus');
+      if(bus==0){
+        var d1 = document.getElementById('route'); 
+        d1.insertAdjacentHTML('afterbegin', '<img src="../images/bus.png" alt=""  height="90%" style="margin-top: 1.6%;" />');
+        
+      }
+      if(bus==1){
+        var d1 = document.getElementById('route'); 
+  
+        d1.insertAdjacentHTML('afterbegin', '<img src="../images/bus.png" alt=""  height="90%" style="margin-top: 1.6%; margin-left: 45%;"/>');
+      }
+      if(bus==2){
+        var d1 = document.getElementById('route'); 
+  
+        d1.insertAdjacentHTML('afterbegin', '  <meta http-equiv="refresh" content="1; URL=classement.html" />');
+      }
+    </script>
 		<div id="map">
 			
       </div>

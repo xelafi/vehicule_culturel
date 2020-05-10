@@ -40,6 +40,7 @@
 
 	</head>
 	<body>
+		
 		<div class="box">
 		<!-- main -->
 		<script>
@@ -61,16 +62,113 @@ var $_GET = $_GET(),
 		
 lieu = $_GET['lieu'];	
 </script>
+
+
 		<div class="main">
-            <h1>Bonne réponse </h1>
+		
+            <h1>Bonne réponse 
+				
+			</h1>
             <img src="../images/100pts.png" style="width: 25%;"/><br><br>
             <img src="../images/bon.png" style="width: 10%;"/>
             <div class="next">
 				<br><br><br>
 				
 				<a href="map.html" onclick="location.href=this.href+'?lieu='+lieu;return false;"><input type="button" value="suivant"></a>
-            </div>
+			</div>
+			<script>
+	
+				function processUser()
+			 {
+			   var parameters = location.search.substring(1).split("&");
+		   
+			   var temp = parameters[0].split("=");
+			   l = unescape(temp[1]);
+			   temp = parameters[1].split("=");
+			   p = unescape(temp[1]);
+			   
+			   document.getElementById("score").innerHTML = p;
+				 
+			   }
+		   
+			 </script>
+		   
+		   
+			   <script>
+				   function creerCookie(nom,valeur,jour){
+					   if(jour){
+						   var date = new Date();
+						   date.setTime(date.getTime()+(jour*24*60*60*1000));
+						   var exp = '; expires='+date.toGMTString();
+					   }
+					   else{
+						   var exp = '';
+					   }
+					   document.cookie = nom+'='+valeur+exp+';path=/';
+				   }
+		   
+				   function lireCookie(nom){
+					   var nomEtEgal = nom + '=';
+					   var cTableau = document.cookie.split(';');
+					   for(var i=0;i<cTableau.length; i++){
+						   var c = cTableau[i];
+						   while(c.charAt(0)==' '){
+							   c = c.substring(1,c.length);
+						   }
+						   if(c.indexOf(nomEtEgal) == 0){
+							   return c.substring(nomEtEgal.length,c.length);
+						   }
+					   }
+					   return null
+				   }
+		   
+				   function supprimerCookie(nom){
+					   creerCookie(nom,'',-1);
+				   }
+		   
+				   
+		   
+				   
+				   var affiche2 = document.getElementById('cook2');
+				   affiche2.innerHTML = lireCookie('score');
+				   var affiche4 = document.getElementById('cook4');
+				   affiche4.innerHTML = lireCookie('score');
+
+				
+				   
+				   
+				   
+				  
+			   </script>
+			   
+			   <h1>
+				   <script>
+					
+					var score = lireCookie(score)+100;
+				   
+				  
+
+				   creerCookie('score',score,7);
+				   
+				   
+			   
+				   </script>
+
+					<script>
+										
+						var bus = lireCookie(bus)+1;
+						
+					
+
+						creerCookie('bus',bus,7);
+					
+					
+
+					</script>
+			   </h1>
 		</div>
+
+		
 		<!-- //main-->
 
 		<!-- js -->
