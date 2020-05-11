@@ -218,11 +218,23 @@ h2 {
 
 h3 {
     color: rgb(0, 0, 0);
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: 300;
-    text-transform: uppercase;
+    
     word-spacing: 10px;
-   font-family: 'Azonix';
+   font-family: 'calibri';
+   font-weight: bold;
+  
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    font-size: 2.5vw;
+    font-weight: 300;
+    
+    word-spacing: 10px;
+   font-family: 'calibri';
+   font-weight: bold;
   
 }
 
@@ -899,3 +911,27 @@ margin-right: 6%;
         font-size: 1.5vw;
         font-family: 'azonix';
     }
+
+    .premier2{
+    
+        width: 37%;
+        height: 80%;
+        margin-left: 15%;
+        float: left;
+    }
+    
+    .reste2{
+    
+        width: 45%;
+        height: 80%;
+        float: right;
+    }
+    
+
+    .text-wrapper3{
+    
+        width: 80%;
+        position: relative;
+        margin-top: -40% ;
+        margin-left: 10%;
+       }
