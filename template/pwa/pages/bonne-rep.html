@@ -39,7 +39,7 @@
 		<!-- //google fonts -->
 
 	</head>
-	<body>
+	<body  onload="pluscent()">
 		
 		<div class="box">
 		<!-- main -->
@@ -144,27 +144,29 @@ lieu = $_GET['lieu'];
 			   <h1>
 				   <script>
 					
-					var score = lireCookie(score)+100;
-				   
-				  
+					var score2 = lireCookie(score);
+					var cent = 100;
+					var score = score2 + cent;
+				
 
 				   creerCookie('score',score,7);
-				   
+
+				
+				window.onload = pluscent;
 				   
 			   
 				   </script>
 
 					<script>
 										
-						var bus = lireCookie(bus)+1;
-						
-					
-
+						var bus = lireCookie(bus);
+						bus++;
 						creerCookie('bus',bus,7);
 					
 					
 
 					</script>
+					
 			   </h1>
 		</div>
 

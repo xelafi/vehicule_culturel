@@ -13,6 +13,7 @@ var filesToCache = [
  './pages/mr-bonne.html',
  './pages/bonne-rep.html',
  './pages/question.html',
+ './pages/cadeaux.html',
  './pages/svg.html',
  './pages/map.html',
  './css/style.css',

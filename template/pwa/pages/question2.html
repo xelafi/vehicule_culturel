@@ -1,0 +1,142 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>ESCAPE-C</title>
+		<!-- Meta tag Keywords -->
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Wonder Coming Soon Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- Meta tag Keywords -->
+
+		<!-- css files -->
+		<link rel="stylesheet" href="../css/style2.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+		<link rel="stylesheet" href="../css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+		<link href="../css/popup-box.css" rel="stylesheet" type="text/css" media="all" /><!-- //popup css -->
+		<link rel="stylesheet" href="/s/jquery.countdown.css" /><!-- //countdown css -->
+		<!-- //css files -->
+
+		<link rel="manifest" href="../manifest.json">
+		<meta name="theme-color" content="white"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="../images/hello-icon-152.png">
+		<meta name="theme-color" content="white"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Hello World">
+		<meta name="msapplication-TileImage" content="../images/hello-icon-144.png">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+
+		<!-- google fonts -->
+		<link href="//fonts.googleapis.com/css?family=Cinzel:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+		<!-- //google fonts -->
+
+	</head>
+	<body>
+        <nav class="menu" role="navigation">
+            <div class="m-left">
+              
+                </h1>
+            </div>
+            <div class="m-center">
+				<h2 id='cook' style="display: inline;"></h2>
+				<script>
+					function creerCookie(nom,valeur,jour){
+						if(jour){
+							var date = new Date();
+							date.setTime(date.getTime()+(jour*24*60*60*1000));
+							var exp = '; expires='+date.toGMTString();
+						}
+						else{
+							var exp = '';
+						}
+						document.cookie = nom+'='+valeur+exp+';path=/';
+					}
+			
+					function lireCookie(nom){
+						var nomEtEgal = nom + '=';
+						var cTableau = document.cookie.split(';');
+						for(var i=0;i<cTableau.length; i++){
+							var c = cTableau[i];
+							while(c.charAt(0)==' '){
+								c = c.substring(1,c.length);
+							}
+							if(c.indexOf(nomEtEgal) == 0){
+								return c.substring(nomEtEgal.length,c.length);
+							}
+						}
+						return null
+					}
+			
+					function supprimerCookie(nom){
+						creerCookie(nom,'',-1);
+					}
+			
+			
+			
+					var affiche = document.getElementById('cook');
+					affiche.innerHTML =  lireCookie('team');
+					var affiche2 = document.getElementById('cook2');
+					affiche2.innerHTML = lireCookie('score');
+                </script>	
+            </div>
+        </nav>
+        
+		<!-- main -->
+
+		<div class="allq">
+            <div class="question">
+				<br><br><h3>Quelle année a été crée le Louvre ?</h3>
+				<h3 id='cook2' style="display: inline;"></h3>
+				<p id='cook2'></p>
+				<script>
+					
+					document.cookie= score;
+					var c2 = document.cookie;
+					document.getElementById('score').innerHTML = c2;
+				</script>		
+            </div>
+		    <div class="photo">
+                <div class="box2" >
+                <div class="photo-center">
+                    
+                    <img src="../images/louvre.jpg" />
+                </div>
+                </div>
+            </div>		
+			<div class="rep">
+                <div class="box2" >
+                <div class="bouts" style="text-align: left;">
+                    <div class="force-left">
+                        <a href="mauvaise-rep.html"><input type="button" value="1735"></a>
+                    </div>
+                    <div class="force-right">
+                    <a href="bonne-rep.html"><input type="button" value="1793"></a>
+                    </div>
+                    <br>
+                    <div class="force-left">
+                        <a href="mauvaise-rep.html"><input type="button" value="1876"></a>
+                    </div>
+                    <div class="force-right">
+                        <a href="mauvaise-rep.html"><input type="button" value="1902"></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+       		
+		</div>
+		<!-- //main-->
+
+		<!-- js -->
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<!-- //js -->
+        <script src="js/main.js"></script>
+   
+	</body>
+</html>

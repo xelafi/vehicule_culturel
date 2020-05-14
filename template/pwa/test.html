@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <meta http-equiv="refresh" content="1; URL=index.html" />
+
 </head>
 <body>
     <p id ='cook'></p>
@@ -61,32 +62,6 @@ var team = 5;
 
         document.write(team);
         creerCookie('Equipe',team ,7)
-    </script>
-    <div>Time left = <span id="timer"></span></div>
-    <script>
-        document.getElementById('timer').innerHTML =
-  001 + ":" + 00;
-startTimer();
-
-function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
-  
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  console.log(m)
-  setTimeout(startTimer, 1000);
-}
-
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
     </script>
  <a href="index.html"><input type="button" value="Continuer"></a>
 </body>

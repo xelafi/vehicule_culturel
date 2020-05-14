@@ -69,13 +69,11 @@ var $_GET = $_GET(),
 	score =	0;
 	bus = 0;
 	
-		
+	localStorage.setItem('score',score);
 	
 				
 				</script>
-		<div id="cook"></div>
-		<div id="cook2"></div>
-		<div id="cook4"></div>
+	
 				
 <script>
 	
@@ -138,6 +136,8 @@ var $_GET = $_GET(),
 		affiche2.innerHTML = 'Valeur : ' + lireCookie('score');
 		var affiche4 = document.getElementById('cook4');
 		affiche4.innerHTML = 'Valeur : ' + lireCookie('bus');
+
+		
 		
     </script>
 				<br>
