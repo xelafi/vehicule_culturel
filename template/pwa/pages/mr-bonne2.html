@@ -45,7 +45,7 @@
                 </h1>
             </div>
             <div class="m-center">
-				<h2 id='cook' style="display: inline;"></h2>
+                <h2 id='cook' style="display: inline;"></h2>
 				<script>
 					function creerCookie(nom,valeur,jour){
 						if(jour){
@@ -84,7 +84,7 @@
 					affiche.innerHTML =  lireCookie('team');
 					var affiche2 = document.getElementById('cook2');
 					affiche2.innerHTML = lireCookie('score');
-                </script>	
+                </script>
             </div>
         </nav>
         
@@ -93,42 +93,15 @@
 		<div class="allq">
             <div class="question">
 				<br><br><h3>Quelle année a été crée le Louvre ?</h3>
-				<h3 id='cook2' style="display: inline;"></h3>
-				<p id='cook2'></p>
-				<script>
-					
-					document.cookie= score;
-					var c2 = document.cookie;
-					document.getElementById('score').innerHTML = c2;
-				</script>		
+				
             </div>
-		    <div class="photo">
-                <div class="box2" >
-                <div class="photo-center">
-                    
-                    <img src="../images/louvre.png" />
-                </div>
-                </div>
-            </div>		
-			<div class="rep">
-                <div class="box2" >
-                <div class="bouts" style="text-align: left;">
-                    <div class="force-left">
-                        <a href="mauvaise-rep2.html"><input type="button" value="1735"></a>
-                    </div>
-                    <div class="force-right">
-                    <a href="bonne-rep.html"><input type="button" value="1793"></a>
-                    </div>
-                    <br>
-                    <div class="force-left">
-                        <a href="mauvaise-rep2.html"><input type="button" value="1876"></a>
-                    </div>
-                    <div class="force-right">
-                        <a href="mauvaise-rep2.html"><input type="button" value="1902"></a>
-                    </div>
-                </div>
+           
+		    <div class="bn">
+                <img src="../images/tour.png" style="width: 45%;"/>
+                <br><br>
+                <a href="classement.html"><input type="button" value="suivant"></a>
             </div>
-            </div>
+        
        		
 		</div>
 		<!-- //main-->
