@@ -32,7 +32,7 @@
 		<meta name="apple-mobile-web-app-title" content="Hello World">
 		<meta name="msapplication-TileImage" content="../images/hello-icon-144.png">
 		<meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta http-equiv="refresh" content="59; URL=cadeaux.html" />
+		<meta http-equiv="refresh" content="19; URL=cadeaux.html" />
 
 		<!-- google fonts -->
 		<link href="//fonts.googleapis.com/css?family=Cinzel:400,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -62,7 +62,7 @@
 	  var timeArray = presentTime.split(/[:]+/);
 	  var m = timeArray[0];
 	  var s = checkSecond((timeArray[1] - 1));
-	  if(s==59){m=m-1}
+	  if(s==19){m=m-1}
 	  //if(m<0){alert('timer completed')}
 	  
 	  document.getElementById('timer').innerHTML =
@@ -73,7 +73,7 @@
 	
 	function checkSecond(sec) {
 	  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-	  if (sec < 0) {sec = "59"};
+	  if (sec < 0) {sec = "19"};
 	  return sec;
 	}
 		</script>
